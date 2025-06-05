@@ -17,50 +17,50 @@ namespace AssignmentManagement.UI
         {
             while (true)
             {
-                Console.WriteLine("\nAssignment Manager Menu:");
-                Console.WriteLine("1. Add Assignment");
-                Console.WriteLine("2. List All Assignments");
-                Console.WriteLine("3. List Incomplete Assignments");
-                Console.WriteLine("4. Mark Assignment as Complete");
-                Console.WriteLine("5. Search Assignment by Title");
-                Console.WriteLine("6. Update Assignment");
-                Console.WriteLine("7. Delete Assignment");
-                Console.WriteLine("0. Exit");
-                Console.Write("Choose an option: ");
+                DisplayMenu();
                 var input = Console.ReadLine();
-
-                switch (input)
-                {
-                    case "1":
-                        AddAssignment();
-                        break;
-                    case "2":
-                        ListAllAssignments();
-                        break;
-                    case "3":
-                        ListIncompleteAssignments();
-                        break;
-                    case "4":
-                        MarkAssignmentComplete(); // TODO
-                        break;
-                    case "5":
-                        SearchAssignmentByTitle(); // TODO
-                        break;
-                    case "6":
-                        UpdateAssignment(); // TODO
-                        break;
-                    case "7":
-                        DeleteAssignment(); // TODO
-                        break;
-                    case "0":
-                        Console.WriteLine("Goodbye!");
-                        return;
-                    default:
-                        Console.WriteLine("Invalid choice. Try again.");
-                        break;
-                }
+                ProcessUserChoice(input);
             }
         }
+
+        private void DisplayMenu()
+        {
+            Console.WriteLine("\nAssignment Manager Menu:");
+            Console.WriteLine("1. Add Assignment");
+            Console.WriteLine("2. List All Assignments");
+            Console.WriteLine("3. List Incomplete Assignments");
+            Console.WriteLine("4. Mark Assignment as Complete");
+            Console.WriteLine("5. Search Assignment by Title");
+            Console.WriteLine("6. Update Assignment");
+            Console.WriteLine("7. Delete Assignment");
+            Console.WriteLine("0. Exit");
+            Console.Write("Choose an option: ");
+        }
+
+        private void ProcessUserChoice(string input)
+        {
+            var actions = new Dictionary<string, Action>
+    {
+        { "1", AddAssignment },
+        { "2", ListAllAssignments },
+        { "3", ListIncompleteAssignments },
+        { "4", MarkAssignmentComplete },
+        { "5", SearchAssignmentByTitle },
+        { "6", UpdateAssignment }, 
+        { "7", DeleteAssignment },
+        { "0", () => { Console.WriteLine("Goodbye!"); Environment.Exit(0); } }
+    };
+
+            if (actions.TryGetValue(input, out var action))
+            {
+                action.Invoke();
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. Try again.");
+            }
+        }
+
 
         private void AddAssignment()
         {
