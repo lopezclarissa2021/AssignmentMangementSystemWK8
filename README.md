@@ -1,21 +1,18 @@
-Assignment Management System
-A console-based C# application that allows users to create, manage, and track assignments. This system supports adding due dates, priorities, notes, and marks tasks as completed. Designed with clean architecture and test-driven development principles.
+## Assignment Management System
 
-✨ Features
-✅ Add new assignments with title, description, due date, priority, and notes
-✅ List all assignments or only incomplete ones
-✅ Search assignments by title
-✅ Update assignment title and description
-✅ Mark assignments as complete
-✅ Delete assignments
+## Overview
+This app allows students to track and update tasks using a modular, test-driven architecture.
 
-🛠 Technologies Used
-C# (.NET 9.0)
-xUnit for unit testing
-Moq for mocking in tests
-Visual Studio 2022
+## Features
+- Create, update, and delete tasks
+- Console and Web API support
+- Moq-based unit testing
+- Regression testing and bug tracking
 
-🚀 How to Run the Project:
-  1- clone the project ~ https://github.com/lopezclarissa2021/AssignmentMangementSystemWK8.git
-  2- build the solution
-  3- run the application
+## Setup
+1. clone the repo ~ https://github.com/lopezclarissa2021/AssignmentMangementSystemWK8.git
+2. Open `AssignmentManagement.sln` in Visual Studio 2022
+3. Run tests using Test Explorer
+
+## Contributing
+Fork and submit PRs; please include new tests for all changes.
