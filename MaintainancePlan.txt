@@ -1,0 +1,6 @@
+## Maintainance Plan
+
+- Perform quarterly code reviews for complexity and cohesion
+- Resolve all GitHub issues within 2 weeks of report
+- Document all new services and methods with XML comments
+- Expand unit test coverage to at least 80%
