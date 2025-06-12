@@ -1,0 +1,9 @@
+Reflection for final thoughts
+
+The biggest challenge for me this quarter was keeping my code clean and organized as the Assignment Management System grew. At first, I had a lot of my logic mixed in with the user interface, which made it confusing and hard to test. I fixed this by moving the important parts of the code into separate services. This made everything easier to manage and improve.
+
+I’m most proud of how I set up the design for different user roles and assignment statuses. I wanted the app to be easy to add features to later, so I kept each part small and focused on one job. That way, everything fits together better, and I can make changes without breaking things.
+
+Using Test-Driven Development (TDD) helped me slow down and think about what each part of the app needed to do before I wrote the actual code. Writing tests first gave me a clear goal and helped me catch mistakes early. Once I had tests in place, I felt more confident making updates and trying out new ideas.
+
+If I could go back to the start of the course, I’d tell myself not to rush. It’s okay not to know everything right away. Ask for help when you need it, and focus on writing simple, clear code. Building something useful takes time, but if you stay patient and open to learning, it all comes together.
